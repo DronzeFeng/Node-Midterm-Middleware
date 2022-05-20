@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "cc7c9d6a-0108-4035-bc27-bfe6c6f25e7a",
+		"name": "middleware-heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "請求所有貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://vast-ravine-67292.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"vast-ravine-67292",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "搜尋特定貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://vast-ravine-67292.herokuapp.com/api/posts?timeSort=asc&q=5",
+					"protocol": "https",
+					"host": [
+						"vast-ravine-67292",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "timeSort",
+							"value": "asc"
+						},
+						{
+							"key": "q",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增單筆貼文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\":\"627b6446854040cced862323\",\n    \"content\":\"測試資料99\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://vast-ravine-67292.herokuapp.com/api/posts/api/posts",
+					"protocol": "https",
+					"host": [
+						"vast-ravine-67292",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "修改單筆貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\":\"627b6446854040cced862323\",\n    \"content\":\"測試資料100\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://vast-ravine-67292.herokuapp.com/api/posts/62860c84f4f75ca27abe417e",
+					"protocol": "https",
+					"host": [
+						"vast-ravine-67292",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"62860c84f4f75ca27abe417e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://vast-ravine-67292.herokuapp.com/api/posts/6285de3b943d6d5beec3969",
+					"protocol": "https",
+					"host": [
+						"vast-ravine-67292",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"6285de3b943d6d5beec3969"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://vast-ravine-67292.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"vast-ravine-67292",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
