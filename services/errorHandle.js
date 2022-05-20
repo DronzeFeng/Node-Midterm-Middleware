@@ -1,17 +1,8 @@
-function errorHandle(res, err) {
-  let message = '';
-
-  if (err) {
-    message = err.message;
-  } else {
-    message = '欄位未填寫正確或查無此ID';
-  }
-
-  res.status(400).send({
-    status: false,
-    message,
-  });
-  res.end();
+function errorHandle(httpStatus, errMessage, next) {
+  const error = new Error(errMessage);
+  error.statusCode = httpStatus;
+  error.isOperational = true;
+  next(error);
 }
 
 module.exports = errorHandle;
